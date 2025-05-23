@@ -120,6 +120,7 @@ use App\Http\Controllers\GanttLinkController;
 use App\Http\Controllers\LeadContactController;
 use App\Http\Controllers\NoticeFileController;
 use App\Http\Controllers\InvoicePaymentDetailController;
+use App\Http\Controllers\LoanController;
 use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\WeeklyTimesheetController;
 use Illuminate\Support\Facades\Mail;
@@ -458,6 +459,11 @@ Route::group(['middleware' => ['auth', 'multi-company-select', 'email_verified']
     });
 
     Route::resource('tasks', TaskController::class);
+ // Loan
+    Route::resource('loans',LoanController::class);
+    Route::post('loans/apply-quick-action', [LoanController::class, 'applyQuickAction'])->name('loans.apply_quick_action');
+
+
 
     // Holidays
     Route::get('holidays/mark-holiday', [HolidayController::class, 'markHoliday'])->name('holidays.mark_holiday');
@@ -466,7 +472,7 @@ Route::group(['middleware' => ['auth', 'multi-company-select', 'email_verified']
     Route::post('holidays/apply-quick-action', [HolidayController::class, 'applyQuickAction'])->name('holidays.apply_quick_action');
     Route::resource('holidays', HolidayController::class);
 
-    // Lead Files
+    // Lead  iles
     Route::get('deal-files/download/{id}', [LeadFileController::class, 'download'])->name('deal-files.download');
     Route::get('deal-files/layout', [LeadFileController::class, 'layout'])->name('deal-files.layout');
     Route::resource('deal-files', LeadFileController::class);

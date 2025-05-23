@@ -26,7 +26,7 @@
         @lang('messages.adminPermissionError')
     </x-alert>
 @else
-   
+
     <x-table class="table-bordered table-hover mt-4 permisison-table bg-white rounded" headType="thead-light">
         <x-slot name="thead">
             <th width="20%">
@@ -43,7 +43,7 @@
                 $notPermited = !in_array($moduleData->module_name, $employeeModules) ? 'disabled' : null;
             @endphp
             <tr>
-                
+
                 <td>@lang('modules.module.'.$moduleData->module_name)
                     @if($notPermited)
                         <i class="fa fa-info-circle" data-toggle="popover" data-placement="top" data-content="@lang('messages.moduleDisabled')" data-html="true" data-trigger="hover"></i>

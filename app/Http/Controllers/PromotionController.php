@@ -72,6 +72,7 @@ class PromotionController extends AccountBaseController
 
         Promotion::create($data);
 
+
         DB::commit();
 
         return Reply::success(__('messages.promotionAddedSuccess'));

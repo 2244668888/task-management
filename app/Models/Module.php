@@ -315,8 +315,35 @@ class Module extends BaseModel
                     'is_custom' => 1,
                     'name' => 'manage_increment_promotion',
                 ],
+
             ]
         ],
+        [
+            'module_name' => 'loans',
+            'permissions' => [
+                [
+                    'allowed_permissions' => Permission::ALL_ADDED_NONE,
+                    'is_custom' => 1,
+                    'name' => 'add_loans',
+                ],
+                [
+                    'allowed_permissions' => Permission::ALL_4_ADDED_1_OWNED_2_BOTH_3_NONE_5,
+                    'is_custom' => 1,
+                    'name' => 'view_loans',
+                ],
+                [
+                    'allowed_permissions' => Permission::ALL_ADDED_NONE,
+                    'is_custom' => 1,
+                    'name' => 'edit_loans',
+                ],
+                [
+                    'allowed_permissions' => Permission::ALL_ADDED_NONE,
+                    'is_custom' => 0,
+                    'name' => 'delete_loans',
+                ],
+            ]
+        ],
+
         [
             'module_name' => 'projects',
             'description' => 'User can view the basic details of projects assigned to him even without any permission.',

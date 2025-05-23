@@ -24,6 +24,9 @@ class DatabaseSeeder extends Seeder
 
         Artisan::call('key:generate');
 
+        $this->call(LoanSeeder::class);
+
+
         $this->call(CountriesTableSeeder::class);
         $this->call(SmtpSettingsSeeder::class);
         $this->call(CoreDatabaseSeeder::class);
@@ -37,6 +40,7 @@ class DatabaseSeeder extends Seeder
         $this->call(FrontSeeder::class);
         $this->call(GlobalCurrencyFormatSetting::class);
 
+
         // SAAS
         $this->call(SuperAdminRoleTableSeeder::class);
 
@@ -46,6 +50,7 @@ class DatabaseSeeder extends Seeder
             $this->call(SuperAdminUsersTableSeeder::class);
 
             $companies = Company::select('id')->get();
+
 
             foreach ($companies as $company) {
                 $this->command->info('Seeding company: ' . ($company->id));

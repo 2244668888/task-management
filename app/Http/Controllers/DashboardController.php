@@ -57,6 +57,8 @@ class DashboardController extends AccountBaseController
     public function index()
     {
 
+
+
         $this->isCheckScript();
         session()->forget(['qr_clock_in']);
         if (in_array('employee', user_roles())) {

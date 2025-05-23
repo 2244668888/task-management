@@ -171,6 +171,8 @@ return array(
         'events' => 'Events',
         'products' => 'Products',
         'orders' => 'Orders',
+        'loans' => 'Loans',
+
         'profileSettings' => 'Profile Settings',
         'twoFactorAuthentication' => 'Two-Factor Authentication',
         'attendanceSettings' => 'Attendance Settings',

@@ -12,6 +12,12 @@ use Illuminate\Support\ServiceProvider;
 use Laravel\Cashier\Cashier;
 use Laravel\Sanctum\Sanctum;
 
+
+
+
+
+
+
 class AppServiceProvider extends ServiceProvider
 {
 
@@ -55,6 +61,11 @@ class AppServiceProvider extends ServiceProvider
             return static::minutes($totalMinutes)->cascade()->forHumans(['short' => true, 'options' => 0]);
             /** @phpstan-ignore-line */
         });
+
+
+
+
+
 
             //    Model::preventLazyLoading(app()->environment('development'));
 

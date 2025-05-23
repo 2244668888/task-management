@@ -11,7 +11,7 @@
                     fieldValue="active" fieldRequired="true" :checked="$pusherSettings->status == 1" />
             </div>
 
-            <div class="col-lg-12 pusher_details @if ($pusherSettings->status == 0) d-none @endif">
+            <div class="col-lg-12 pusher_details @if ($pusherSettings->status == ) d-none @endif">
             <div class="row mt-3">
 
                 <div class="col-lg-6 col-md-6">

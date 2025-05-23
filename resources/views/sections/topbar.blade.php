@@ -53,7 +53,7 @@
             @if (in_array(company()->package->default, ['yes']) && in_array('admin', user_roles()))
                 <a href="{{ route('billing.upgrade_plan') }}" class='btn-primary btn btn-sm rounded mr-3 f-12 py-2 px-3' data-toggle="tooltip" data-original-title="{{ __('superadmin.packages.upgradePlan') }}" >
                     <i class="bi bi-stars"></i>
-                    @if (is_null($selfActiveTimer)) {{ __('superadmin.packages.upgradePlan') }} @endif
+                    {{-- @if (is_null($selfActiveTimer)) {{ __('superadmin.packages.upgradePlan') }} @endif --}}
                 </a>
             @elseif (in_array(company()->package->default, ['trial']) && in_array('admin', user_roles()))
                 <a href="{{ route('billing.upgrade_plan') }}" class='btn-light border btn btn-sm rounded mr-3 f-12 py-2 px-3 font-weight-semibold d-none d-lg-block' data-toggle="tooltip" data-original-title="{{ __('superadmin.packages.upgradePlan') }}" >

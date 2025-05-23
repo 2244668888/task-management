@@ -42,7 +42,6 @@ class ModulePermissionSeeder extends Seeder
                     ['module_id' => $permission['module_id'], 'name' => $permission['name']],
                     $permission
                 );
-
             }
         }
     }

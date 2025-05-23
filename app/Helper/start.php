@@ -869,6 +869,7 @@ if (!function_exists('sidebar_user_perms')) {
                 'view_contract',
                 'view_projects',
                 'view_tasks',
+                'view_loans',
                 'view_timelogs',
                 'view_estimates',
                 'view_invoices',
@@ -959,6 +960,7 @@ if (!function_exists('sidebar_superadmin_perms')) {
                 'view_request',
                 'view_admin_faq',
                 'view_superadmin',
+                'view_loans',
                 'view_superadmin_ticket',
                 'manage_superadmin_front_settings',
 
